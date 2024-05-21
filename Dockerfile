@@ -1,7 +1,6 @@
-FROM node:10
-WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm install
+FROM node:16
+WORKDIR /home/root
 COPY . .
+RUN npm install
 EXPOSE 3000
 CMD [ "npm", "start" ]
